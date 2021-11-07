@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>default</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Consumer" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RocketMQ.Client.Abstractions\RocketMQ.Client.Abstractions.csproj" />
+      <ProjectReference Include="..\RocketMQ.Remoting.Abstractions\RocketMQ.Remoting.Abstractions.csproj" />
+      <ProjectReference Include="..\RocketMQ.Remoting\RocketMQ.Remoting.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    </ItemGroup>
+
+</Project>
