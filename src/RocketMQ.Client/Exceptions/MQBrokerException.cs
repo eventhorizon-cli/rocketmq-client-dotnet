@@ -16,24 +16,13 @@
  */
 
 using System;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using RocketMQ.Client.Producer;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace RocketMQ.Client.Exceptions
 {
-    public static class RocketMQProducerServiceCollectionExtensions
+    public class MQBrokerException:Exception
     {
-        public static IServiceCollection AddRocketMQProducer(
-            this IServiceCollection services,
-            string name, 
-            Action<RocketMQProducerOptions> configureOptions)
+        public MQBrokerException(int responseCode ,string message) : base(message)
         {
-            services.AddRocketMQRemoting();
-            
-            // TODO: Consider whether to prefix the name.
-            services.PostConfigure(name, configureOptions);
-            services.TryAddSingleton<IRocketMQProducerFactory, RocketMQProducerFactory>();
-            return services;
         }
     }
 }

@@ -15,13 +15,18 @@
  * limitations under the License.
  */
 
-namespace RocketMQ.Client
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace RocketMQ.Client.Internal.Route
 {
-    public enum SendStatus
+    internal interface INameServer
     {
-        SendOk,
-        FlushDiskTimeout,
-        FlushSlaveTimeout,
-        SlaveNotAvailable,
+        Task<TopicRouteData> GetTopicRouteInfoAsync(
+            string topic,
+            TimeSpan timeout,
+            bool allTopicNotExist = true,
+            HashSet<int> logicalQueueIdsFilter = null);
     }
 }

@@ -15,17 +15,6 @@
  * limitations under the License.
  */
 
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using RocketMQ.Remoting;
+using System.Runtime.CompilerServices;
 
-namespace Microsoft.Extensions.DependencyInjection
-{
-    public static class RocketMQRemotingServiceCollectionExtensions
-    {
-        public static IServiceCollection AddRocketMQRemoting(this IServiceCollection services)
-        {
-            services.TryAddSingleton<IRemotingClient, RemotingClient>();
-            return services;
-        }
-    }
-}
+[assembly: InternalsVisibleTo("RocketMQ.Client.Tests")]

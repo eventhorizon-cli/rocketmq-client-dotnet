@@ -3,7 +3,7 @@
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
+ * (the "License", you may not use this file except in compliance with
  * the License.  You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
@@ -15,9 +15,21 @@
  * limitations under the License.
  */
 
-namespace RocketMQ.Remoting.Protocol
+namespace RocketMQ.Client.Internal.Remoting.Protocol
 {
-    public class RemotingCommand
+    internal enum LanguageCode : sbyte
     {
+        Java = 0,
+        Cpp = 1,
+        Dotnet = 2,
+        Python = 3,
+        Delphi = 4,
+        Erlang = 5,
+        Ruby = 6,
+        Other = 7,
+        Http = 8,
+        Go = 9,
+        Php = 10,
+        Oms = 11,
     }
 }

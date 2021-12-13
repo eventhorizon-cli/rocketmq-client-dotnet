@@ -15,32 +15,10 @@
  * limitations under the License.
  */
 
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
-using RocketMQ.Remoting.Protocol;
-
-namespace RocketMQ.Remoting
+namespace RocketMQ.Client.Internal
 {
-    public class RemotingClient: IRemotingClient
+    public interface IMQClient
     {
-        public Task<RemotingCommand> InvokeAsync(EndPoint endPoint, RemotingCommand request, CancellationToken cancellationToken)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Task<RemotingCommand> InvokeOneway(EndPoint endPoint, RemotingCommand request, CancellationToken cancellationToken)
-        {
-            throw new System.NotImplementedException();
-        }
-        
-        public ValueTask DisposeAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-        }
+        void Start();
     }
 }
