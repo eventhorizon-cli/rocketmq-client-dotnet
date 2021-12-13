@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\RocketMQ.Client.Abstractions\RocketMQ.Client.Abstractions.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Bedrock.Framework.Experimental" Version="0.1.63-alpha.gf69fa1b135" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
