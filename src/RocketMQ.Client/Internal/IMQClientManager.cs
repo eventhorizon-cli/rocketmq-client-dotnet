@@ -15,16 +15,10 @@
  * limitations under the License.
  */
 
-using System;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace RocketMQ.Client.Producer
+namespace RocketMQ.Client.Internal
 {
-    public interface IRocketMQProducer : IDisposable
+    internal interface IMQClientManager
     {
-        Task<SendResult> SendAsync(Message message, CancellationToken cancellationToken);
-
-        Task SendOnewayAsync(Message message, CancellationToken cancellationToken);
+        IMQClient GetOrCreateMQClient(in MQClientOptions options);
     }
 }

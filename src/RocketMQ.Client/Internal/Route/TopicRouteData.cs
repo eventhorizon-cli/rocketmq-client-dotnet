@@ -15,18 +15,14 @@
  * limitations under the License.
  */
 
-using System;
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
-using RocketMQ.Remoting.Protocol;
-
-namespace RocketMQ.Remoting
+namespace RocketMQ.Client.Internal.Route
 {
-    public interface IRemotingClient : IDisposable
+    internal class TopicRouteData
     {
-        Task<RemotingCommand> InvokeAsync(EndPoint endPoint, RemotingCommand request, CancellationToken cancellationToken);
+        public string OrderTopicConf { get; set; }
 
-        Task<RemotingCommand> InvokeOneway(EndPoint endPoint, RemotingCommand request, CancellationToken cancellationToken);
+        public QueueData[] QueueDatas { get; set; }
+
+        public BrokerData[] BrokerDatas { get; set; }
     }
 }

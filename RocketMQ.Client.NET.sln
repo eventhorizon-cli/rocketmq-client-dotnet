@@ -2,17 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4BAACDA0-9553-4A3A-B7A3-7359D985A4EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQ.Remoting", "src\RocketMQ.Remoting\RocketMQ.Remoting.csproj", "{166BF725-F02C-4C35-84EE-29003D85FC66}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQ.Client", "src\RocketMQ.Client\RocketMQ.Client.csproj", "{FF8724C4-39D7-4948-AE2C-553E31163A9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQ.Client.Abstractions", "src\RocketMQ.Client.Abstractions\RocketMQ.Client.Abstractions.csproj", "{AA718DF4-7900-406F-A655-96EBF5685F30}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQ.Remoting.Abstractions", "src\RocketMQ.Remoting.Abstractions\RocketMQ.Remoting.Abstractions.csproj", "{A18292A9-1DEA-4AE5-AF7D-2DE7227F6084}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3A1EB8F8-097C-41D3-97E3-EA8BCD15C4E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQ.Remoting.Tests", "test\RocketMQ.Remoting.Tests\RocketMQ.Remoting.Tests.csproj", "{F45F9FF5-4E07-42B3-B7B2-062CE02BDA8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQ.Client.Tests", "test\RocketMQ.Client.Tests\RocketMQ.Client.Tests.csproj", "{3788A45A-0273-461C-88F6-76D8E6EA23A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,32 +14,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{166BF725-F02C-4C35-84EE-29003D85FC66} = {4BAACDA0-9553-4A3A-B7A3-7359D985A4EF}
 		{FF8724C4-39D7-4948-AE2C-553E31163A9D} = {4BAACDA0-9553-4A3A-B7A3-7359D985A4EF}
-		{AA718DF4-7900-406F-A655-96EBF5685F30} = {4BAACDA0-9553-4A3A-B7A3-7359D985A4EF}
-		{A18292A9-1DEA-4AE5-AF7D-2DE7227F6084} = {4BAACDA0-9553-4A3A-B7A3-7359D985A4EF}
-		{F45F9FF5-4E07-42B3-B7B2-062CE02BDA8A} = {3A1EB8F8-097C-41D3-97E3-EA8BCD15C4E4}
+		{3788A45A-0273-461C-88F6-76D8E6EA23A1} = {3A1EB8F8-097C-41D3-97E3-EA8BCD15C4E4}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{166BF725-F02C-4C35-84EE-29003D85FC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{166BF725-F02C-4C35-84EE-29003D85FC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{166BF725-F02C-4C35-84EE-29003D85FC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{166BF725-F02C-4C35-84EE-29003D85FC66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF8724C4-39D7-4948-AE2C-553E31163A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF8724C4-39D7-4948-AE2C-553E31163A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF8724C4-39D7-4948-AE2C-553E31163A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF8724C4-39D7-4948-AE2C-553E31163A9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA718DF4-7900-406F-A655-96EBF5685F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA718DF4-7900-406F-A655-96EBF5685F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA718DF4-7900-406F-A655-96EBF5685F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA718DF4-7900-406F-A655-96EBF5685F30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A18292A9-1DEA-4AE5-AF7D-2DE7227F6084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A18292A9-1DEA-4AE5-AF7D-2DE7227F6084}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A18292A9-1DEA-4AE5-AF7D-2DE7227F6084}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A18292A9-1DEA-4AE5-AF7D-2DE7227F6084}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F45F9FF5-4E07-42B3-B7B2-062CE02BDA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F45F9FF5-4E07-42B3-B7B2-062CE02BDA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F45F9FF5-4E07-42B3-B7B2-062CE02BDA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F45F9FF5-4E07-42B3-B7B2-062CE02BDA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3788A45A-0273-461C-88F6-76D8E6EA23A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3788A45A-0273-461C-88F6-76D8E6EA23A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3788A45A-0273-461C-88F6-76D8E6EA23A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3788A45A-0273-461C-88F6-76D8E6EA23A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

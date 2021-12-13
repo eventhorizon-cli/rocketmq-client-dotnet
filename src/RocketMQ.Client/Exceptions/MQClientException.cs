@@ -17,14 +17,19 @@
 
 using System;
 
-namespace RocketMQ.Client.Producer
+namespace RocketMQ.Client.Exceptions
 {
-    /// <summary>
-    /// A factory abstraction for a component that can create <see cref="IRocketMQProducer"/> instances with custom
-    /// configuration for a given logical name.
-    /// </summary>
-    public interface IRocketMQProducerFactory: IDisposable
+    public class MQClientException : Exception
     {
-        IRocketMQProducer CreateProducer(string name);
+        public int ResponseCode { get; }
+
+        public MQClientException(string message, Exception? innerException) : base(message, innerException)
+        {
+        }
+
+        public MQClientException(int responseCode, string message) : base(message)
+        {
+            ResponseCode = responseCode;
+        }
     }
 }

@@ -17,34 +17,17 @@
 
 using System.Threading;
 using System.Threading.Tasks;
-using RocketMQ.Remoting;
 
 namespace RocketMQ.Client.Producer
 {
-    public class RocketMQProducer : IRocketMQProducer
+    public interface IMQProducer 
     {
-        private readonly RocketMQProducerOptions _options;
-        private readonly IRemotingClient _remotingClient;
+        void Start();
+        
+        void Shutdown();
 
-        public RocketMQProducer(RocketMQProducerOptions options, IRemotingClient remotingClient)
-        {
-            _options = options;
-            _remotingClient = remotingClient;
-        }
+        Task<SendResult> SendAsync(Message message, CancellationToken cancellationToken = default);
 
-        public Task<SendResult> SendAsync(Message message, CancellationToken cancellationToken)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Task SendOnewayAsync(Message message, CancellationToken cancellationToken)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            _remotingClient.Dispose();
-        }
+        Task SendOnewayAsync(Message message, CancellationToken cancellationToken = default);
     }
 }

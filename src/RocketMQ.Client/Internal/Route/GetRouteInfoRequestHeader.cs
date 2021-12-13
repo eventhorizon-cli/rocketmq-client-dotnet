@@ -15,10 +15,17 @@
  * limitations under the License.
  */
 
-namespace RocketMQ.Client.Producer
+using System.Collections.Generic;
+using RocketMQ.Client.Internal.Remoting.Protocol;
+
+namespace RocketMQ.Client.Internal.Route
 {
-    public class RocketMQProducerOptions
+    internal class GetRouteInfoRequestHeader : CommandCustomHeader
     {
-        public string[] NameServiceAddresses { get; set; }
+        public string Topic { get; set; }
+
+        public int SysFlag { get; set; }
+
+        public HashSet<int> LogicalQueueIdsFilter { get; set; }
     }
 }

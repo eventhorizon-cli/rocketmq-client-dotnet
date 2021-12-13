@@ -15,10 +15,18 @@
  * limitations under the License.
  */
 
-namespace RocketMQ.Remoting.Protocol
+namespace RocketMQ.Client.Internal.Remoting.Protocol
 {
-    public enum LanguageCode
+    internal static class ResponseCodes
     {
-        DOTNET = 2
+        public const short ResSuccess = 0;
+        public const short ResError = 1;
+        public const short ResFlushDiskTimeout = 10;
+        public const short ResSlaveNotAvailable = 11;
+        public const short ResFlushSlaveTimeout = 12;
+        public const short ResTopicNotExist = 17;
+        public const short ResPullNotFound = 19;
+        public const short ResPullRetryImmediately = 20;
+        public const short ResPullOffsetMoved = 21;
     }
 }

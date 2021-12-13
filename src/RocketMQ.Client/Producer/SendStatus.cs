@@ -15,17 +15,13 @@
  * limitations under the License.
  */
 
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace RocketMQ.Client.Producer
 {
-    public static class RocketMQProducerExtensions
+    public enum SendStatus
     {
-        public static Task<SendResult> SendAsync(this IRocketMQProducer producer, Message message) =>
-            producer.SendAsync(message, CancellationToken.None);
-
-        public static Task SendOnewayAsync(this IRocketMQProducer producer, Message message) =>
-            producer.SendOnewayAsync(message, CancellationToken.None);
+        SendOk,
+        FlushDiskTimeout,
+        FlushSlaveTimeout,
+        SlaveNotAvailable,
     }
 }
